@@ -1,0 +1,24 @@
+Object-oriented programming – As the name suggests uses objects in programming. Object-oriented programming aims to implement real-world entities like inheritance, hiding, polymorphism, etc in programming.
+
+Classes and objects are the two main aspects of object-oriented programming.
+
+Charactersticks of OOPs:-
+1. Object
+2. class
+3. abstraction, encapsulation, polymorphism, inheritance.
+
+Object:- 
+ 
+Any entity that has state and behavior is known as an object. For example: chair, pen, table, keyboard, bike etc. It can be physical and logical.
+
+An Object is an instance of a Class. When a class is defined, no memory is allocated but when it is instantiated (i.e. an object is created) memory is allocated. 
+
+
+Class:- A class is a user-defined data type that we can use in our program, and it works as an object constructor, or a "blueprint" for creating objects.
+class is a templet which define property and function of object.
+
+
+let suppose student is object then it has property like 
+name, rollno, age, address.
+ans function like
+change age(), change address();

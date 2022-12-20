@@ -1,0 +1,13 @@
+when we compile our code we get lots of error
+and this is because the property of access modifier
+
+access modifier :-
+public
+private
+protected
+
+
+private means:- you can not access its property outside the class
+public:- we can access anywhere
+
+by default value of access modifier is private
