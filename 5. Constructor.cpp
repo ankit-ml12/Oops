@@ -13,11 +13,11 @@ class Student{
     // the movement we create constructor default constructor will not work
     
     // Student(int age){
-        // this.age= age;
+        // this->age= age;
     // }
     // Student(int age, int rollNumber){
-        // this.age= age;
-        // this.rollNumber= rollNumber
+        // this->age= age;
+        // this->rollNumber= rollNumber
     // }
     
     
