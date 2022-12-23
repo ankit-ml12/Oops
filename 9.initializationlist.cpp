@@ -25,3 +25,5 @@ int main(){
     
     return 0;
 }
+
+// we can also create constant object but after creating we are unable to change their value
