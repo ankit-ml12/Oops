@@ -7,5 +7,7 @@
 
 //declare like this
 
-// int hell const(){
+// int functionname const(){
 // }
+
+
