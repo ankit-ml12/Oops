@@ -1,0 +1,33 @@
+1. echo
+echo command in Linux is used to display lines of text/string that is passed as an argument.
+
+2. uptime
+How long has my system been running?
+
+3. date
+What is the current date and time on the system?
+
+4. whoami
+Who is currently logged into the computer?
+
+5. which
+We got to execute various commands in the terminal. But where are they installed in Linux? Let’s find out using the which command.
+
+6. clear 
+command to clear the terminal.
+
+7. exit
+We have executed many commands, and it’s time to close the terminal. How do we do it?
+
+Press on the red cross icon in the window's top right corner OR
+exit command ( you’ll probably use this a lot if you are a hardcore keyboard person :)
+
+
+===============================================================================================
+Tips:-
+Here are some useful commands to make your life easier working on a Linux terminal!
+
+up arrow ⬆ key → will bring up the last executed command. Each press will bring up the previous command executed
+
+history command → will print out a list of the previous commands executed
+
