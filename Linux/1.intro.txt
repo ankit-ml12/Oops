@@ -1,0 +1,52 @@
+Why Linux?
+
+A majority of systems around the world run some form of Linux. These range from enterprise and desktop servers to smartphones.
+
+60 to 70% of all Web Servers in the world run some form of Linux/Unix, and ~90% of all cloud computing happens on Linux-based servers.
+Most of the smartphones in the world run on Linux.
+Mac is based on Unix and supports a terminal where we can run commands.
+Linux in Real World
+
+You are using Linux servers daily, whether you realize it or not
+
+Cloud - Dropbox/Google drive, Other SaaS, Online streaming/gaming services
+Mobiles, TVs, Cars, Smartwatches, Routers, Supercomputers
+Almost all Enterprise machines
+
+
+What is an operating system?
+An operating system is the most critical software that runs on a computer. It manages the computer's memory and processes and all of its software and hardware. It also allows you to communicate with the computer without knowing how to speak the computer's language. It makes it easier to interact with computers such as going through files and folders, configuring settings, connecting to the network, etc. Windows is a commonly used operating system. Without an operating system, a computer is useless. Watch the video below to learn more about operating systems.
+
+
+What are Linux operating systems?
+Linux is a kernel (i.e, a template) based on which operating systems can be created. The Linux kernel takes care of essential operations like processing files, taking care of memory, cpu ,etc.
+
+Here are a few commonly used Linux-based operating systems (also called Linux Distributions)
+
+
+Ubuntu ( Debian-based )
+CentOS
+Fedora
+Arch Linux
+
+and many more.
+
+
+
+What is a Command line/Terminal?
+CLI is a command line program that accepts text input to execute operating system functions.
+=======================================
+The Linux terminal
+Text-based user interface
+Used to run programs and interact with the computer
+All GUI (Graphical User Interface) based actions eventually translate to a command which gets executed
+The Terminal gives a direct way to run these commands
+Popular CLIs (Command Line Interface):
+    Powershell: Windows
+    Bash: Linux & MacOS
+
+
+
+Why linux:- 
+The Terminal, also known as the command line or a Terminal emulator, is an essential component of any useful operating system. It is by far one of the most important applications on Mac and Linux. The Terminal provides an efficient interface to access the true power of a computer better than any graphical interface.
+
