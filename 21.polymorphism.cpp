@@ -23,3 +23,6 @@ int test (){
 
 
 //  Run time polymorphism
+// we take decision at run time of code 
+
+//complete ramaining two at the end
