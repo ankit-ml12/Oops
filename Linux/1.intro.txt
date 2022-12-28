@@ -50,3 +50,18 @@ Popular CLIs (Command Line Interface):
 Why linux:- 
 The Terminal, also known as the command line or a Terminal emulator, is an essential component of any useful operating system. It is by far one of the most important applications on Mac and Linux. The Terminal provides an efficient interface to access the true power of a computer better than any graphical interface.
 
+
+========================================
+options with command
+ls -l is used to list file and directories in long listing format, along with some other information.
+ls -a is used to check hidden files and directories
+Let’s try out giving multiple options at a time. As we can see ls -l -a or ls -la command lists out the hidden files in the long listing format.
+ls -lt sorts the contents listed based on the last modification time, newest first
+The -r option reverses the sort order, so ls -ltr prints the oldest modified contents on the top
+
+
+==========================
+Note
+The -a, -h, -l, -r, -t are all options supported by the ls command. They modify the output returned by ls command.
+
+Googling is one way. Commands come with a “Manual” as well. We can access it using the man command followed by the name of the command we need to see the manual of. For ls, we do man ls.

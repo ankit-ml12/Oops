@@ -1,0 +1,43 @@
+Absolute path
+Absolute path
+In the Linux terminal, there is always more than one way to do the same thing. Below are some options to display the contents of /var.
+
+cd to the /var directory and do ls
+Do ls /var instead
+
+
+This is called using the absolute path where we provided the full path to a directory right from the root of the filesystem: /.
+
+
+======================
+To make it explicit a path is a directory, it’s common to add an additional / at the end of the paths.
+
+1. Eg: /var/ is same as the /var directory
+2. Both ls /var and ls /var/ will list the contents of the /var directory
+3. You’ll get a below error if you append / to a non-directory
+
+
+
+======================================
+Relative Path
+Let’s look back into this example where we are already inside the /home/crio-user/workspace/ directory and want to cd to the /home/crio-user/workspace/linux-commands directory. 
+
+
+You’d notice the cd linux-commands command not starting with the / character. This is called a Relative path.
+
+
+
+Relative paths are relative to the present working directory
+
+Note
+Let’s look at some common terminologies
+
+1. Current or Present working directory : As the name indicates, it represents the current directory in which we are currently working.
+2. Parent directory: This represents the directory which contains the present directory.
+   2.1 Suppose the folder structure is like, we have a directory named “children/” inside which we have directories named “child1/” and “child2/”
+   2.2 Let’s say we are currently working in the “child2/” directory. In this case, parent directory is the “children/” directory.
+3. Previous working directory: Suppose if we take example of previous file structure. If we start working with the “child1/” directory and then we cd to “child2/” directory, then previous working directory will be “child1”
+
+
+========================
+tree command to print the tree structure 

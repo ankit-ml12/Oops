@@ -1,0 +1,60 @@
+File system in linux:- 
+
+The file system may be defined as the way of storing the data in a particular manner so that it could be located smoothly when required. Based on the operating system, it depends on which kind of file system has been followed. The main purpose of the file system is to make it easy for the users and the operating system to store the files in a specified manner so that all the parties can store or fetch the files with ease. As the name states, the file system deals with the files and directories that are supposed to be kept in the storage device using any operating system. The operating system just plays the role of an intermediate that facilitates the data transfer to the storage device so it can be stored there.
+
+In the Linux operating system, the mounting and unmounting of the hard drive are not possible while the operating system is running. Therefore, in the beginning, while installing the operating system, you will get the chance to choose the part of the disk that you will be using or that you want to be occupied by any file system. Below are some file systems that one can choose while installing Linux in their system. There are several file systems available to the user, and based on their requirement, one can select either of the file systems.
+
+
+Linux file system is generally a built-in layer of a Linux operating system used to handle the data management of the storage. It helps to arrange the file on disk storage. It manages the file name, size, creation date, and more information about a file
+
+Partitions on a Disk ( /dev/sda )
+A Linux file system is a structured collection of files on a disk drive or a partition. A partition is a segment of memory that contains some specific data. In our machine, there can be various partitions of memory. Generally, every partition contains a file system which is represented by a Hierarchical Tree Structure. Root folder comes first, and then files are under root respectively.
+
+Here’s a complete picture of the different root level (similar to “/bin”, “/home”) directories in Linux:-
+
+/     :- this is root directory
+/home :- where all user home directory is saved 
+/boot :- file require to start a linux machine 
+/bin  :- contain executable file 
+/var  :- contain varibale data like logs, database, website etc 
+================================
+Note
+“folder” and “directory” carries the same meaning. “folder” is usually used in a GUI setting whereas “directory” gets used more in the Linux world.
+
+In Linux, directories are separated by the forward slash / (see the ? key on your keyboard). This differs from Windows where the backslash \ is used to separate directories.
+
+Parent directory is / or root.
+
+The pound sign # is used to write comments. Everything after the first # is ignored. Did you notice the comments in the screenshot above?
+
+ls / lists all the root level directories
+
+
+================================
+Navigation using terminal:- 
+
+1. pwd :- present working directory 
+2. ls  :- list of all file and folder  it open {files, directories, executables}
+3. cd  :- change directory 
+4. mkdir TEMP_NAME :- to make new directory with TEMP_NAME
+
+====================================
+If you don’t provide any argument to the cd command, it defaults to the user’s home directory.
+There is a symbol to denote a user’s home directory. The tilde (~) sign.
+cd ~ will take you to your home directory.
+The ls command defaults to the present working directory. If we use ls command with a directory name, it lists the contents of the specified directory.
+ ls ~ will list the contents of your home directory.
+
+ ===========================================
+
+Arguments
+It is an input given as part of terminal commands.
+There can be one or more arguments/parameters.
+
+Syntax:
+
+<command> <argument>  
+<command> <argument1> <argument2>  
+
+
+

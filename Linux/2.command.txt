@@ -23,6 +23,8 @@ Press on the red cross icon in the window's top right corner OR
 exit command ( you’ll probably use this a lot if you are a hardcore keyboard person :)
 
 
+to install any command directory use:- 
+sudo apt install which
 ===============================================================================================
 Tips:-
 Here are some useful commands to make your life easier working on a Linux terminal!
