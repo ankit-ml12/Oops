@@ -1,0 +1,43 @@
+Viewing file contents
+Looking at the contents of a file is essential. Given that we’ll have very long files, our requirement could be to check the last few lines of a file, etc; there are different ways to print the contents of a file
+
+1. cat
+cat command is very frequently used in Linux
+It reads data from a file and prints its content on the terminal
+It helps us to view files
+-n options prints the content along with line numbers
+
+2. head
+head command prints 10 lines from top (head) of a file
+We can use the -n option to configure how many lines to print
+ ex:- head -n 10 ankit.txt 
+
+3. tail
+tail command prints 10 lines from end (tail) of a file
+We can use the -n option to configure how many lines to print
+
+The -f option can be used to listen to changes to a file
+this cmd work only with tail cmd 
+Ctrl + c can be used to exit out of the tail interactive window when listening to a file
+
+
+4. more
+more allows to view contents of a large file part by part instead of printing a long file entirely on the terminal
+We can navigate the more output using these keys on the keyboard
+
+    :- “space” key - Go to next page
+    :- “b” key - Go back one page
+    :- “Enter” key - Show next line of content
+
+5. less
+less functions similar to more but is efficiently implemented to not load the entire content of a file to memory all at once.
+
+
+We can navigate the less output using these keys on the keyboard
+
+:- “space” key - Go to next page
+:- “b” key - Go back one page
+:- “Enter” key - Show next line of content
+:- “y” key - Show previous line of content
+:- “q” key - Get outside of the less screen
+
