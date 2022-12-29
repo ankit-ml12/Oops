@@ -1,0 +1,14 @@
+Editing files
+We are used to GUI-based tools like Notepad for editing files which is a very convenient way. In some cases like connecting to remote server, we won’t have access to GUI and need to rely only on CLI to perform operations. It becomes essential to master the skill of editing the files in the command line as well.
+
+
+1. nano
+->It is a command line based text editor
+->It is used to create a new file and open it or open an existing   file for editing
+->To save a file press ctrl + o and hit enter to confirm the file name to write to
+->To exit the editor use ctrl +x
+
+2. sed
+It is a text stream editor used on Unix systems to edit files quickly and efficiently.
+It searches through, replaces, adds, and deletes lines in a text file without opening it in a text editor.
+
