@@ -1,0 +1,58 @@
+Manipulating files and directories
+
+1. mkdir
+The command mkdir stands for “make directory”.
+It creates each directory specified as an argument in the order given.
+
+Instead of creating the missing parent directories one by one, invoke the mkdir command with the -p option. When 
+the -p option is used, the command creates the directory only if it doesn’t exist.
+
+
+2. tree
+You need to use a command called tree.
+
+It will list the contents of directories in a tree-like format.
+It is a recursive directory listing program that produces a depth-indented listing of files.
+When directory arguments are given, the tree lists all the files and/or directories found in the given directories each in turn. Upon completion of listing all files/directories found, the tree returns the total number of files and/or directories listed.
+
+
+3. touch
+It is used to create a file without any content
+The file created using touch command will be empty
+This command can be used when we do not have data to store at the time of file creation
+ex:- touch ankit.txt 
+
+4. 4. cp
+This command is used to copy the contents of a file (i.e source) to another file in the same or different directory(i.e, destination)
+
+A new file automatically gets created in the destination directory to store the copied content if a file of the same name does not exist already.
+
+B. If the destination folder already contains a file with the same name, its content gets overwritten
+
+cp <source-path> <destination-path>
+
+======================================
+
+
+5. cat command is used to print the content of file 
+
+6.Copy pasting directory
+The cp command can be used to copy directories in a similar fashion. The -r option is to be used in this case.
+
+7.  rmdir
+rmdir stands for remove directory here.
+rmdir command is used to remove folders.
+A non-empty directory can be deleted using this.
+
+8. rm
+rm stands for remove
+rm command is used to remove files
+
+-r tag is used with rm command to remove a non-empty directory
+
+
+mv
+mv stands for move
+mv is used to move one or more files or directories from one place to another
+We move the “newFile.txt” file here
+Can be used to rename a file as well
