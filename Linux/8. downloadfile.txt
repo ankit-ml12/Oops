@@ -1,0 +1,8 @@
+File download:-
+
+Linux provides us with many command-line tools like wget, curl, etc. to download any kind of file from the internet. Let’s try downloading VSCode using one such tools in our terminal.
+
+
+wget
+Helps us to download the files from the web.
+It provides several options allowing you to download multiple files, resume downloads, limit the bandwidth, recursive downloads, download in the background, mirror a website, and much more.
