@@ -19,13 +19,18 @@ class Student{
         // this->age= age;
         // this->rollNumber= rollNumber
     // }
-    
+    int getage();
     
     // this constructor change the default value of object 
     // if you create multiple constructor with different no of variable 
     // only which constructor will call who has no of variable equal to no of argument
     
 };
+
+//membet function outside the class but you have to initilise in class
+int Student::getage(){
+		return	age;
+}
 
 int main(){
     

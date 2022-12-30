@@ -12,3 +12,48 @@ We are used to GUI-based tools like Notepad for editing files which is a very co
 It is a text stream editor used on Unix systems to edit files quickly and efficiently.
 It searches through, replaces, adds, and deletes lines in a text file without opening it in a text editor.
 
+
+Replace String Using the sed Command
+The Linux sed command is most commonly used for substituting text. It searches for the specified pattern in a file and replaces it with the wanted string.
+
+To replace text using sed, use the substitute command s and delimiters (in most cases, slashes - /) for separating text fields.
+
+Therefore, the syntax for replacing text is:
+sed 's/old_string/new_string/' filename.txt
+
+Replace old_string with the text you want to substitute and new_string with the text you want to change it to.
+
+
+Note:- 
+sed does not affect the source file unless instructed. Instead, the command displays the changes made by the given command in its output.
+
+To overwrite the original file, use the -i option to save the modifications. However, such practice is only recommended after testing out the command output.
+
+=====
+
+Replace All Occurrences of String Using the sed Command
+By default, sed only replaces the first occurrence of the specified string in each line. It searches for the first instance of the specified word in a line, replaces it, and moves on to the next line.
+
+With multiple instances of the word box in the same line, the command only substitutes the first.
+
+
+If you have multiple instances of the same word within a single line, add the g flag to the command to change all of them.
+
+Ex:- 
+sed 's/old_string/new_string/g' filename.txt
+
+===================================================================
+Replace String Using the sed Command and Ignore Case
+
+By default, the sed command is case-sensitive. For instance, the following content contains the word fox with upper and lowercase first letters:
+
+usual command only changes the occurrence of the word which is match exectly with even check for upper case and lower case 
+
+To ignore case while substituting text, add the i subcommand at the end of the command:
+
+sed 's/old_string/new_string/i' filename.txt
+==================================================================
+
+
+use s/old_string/new_string/ig filename.txt 
+if you want to change every element present inside the line and want to change all similar irespective of their nature of lowercase and upper case
