@@ -37,6 +37,16 @@ but in case of overriding the present content we use >> double operator
 
 ====================================================
 
+Feeding the Output of a command as Input to another command
+
+
+To find the number of comments in a file, we have to
+
+
+  :- Find the comment lines using grep and redirect its output to a new file
+    Use the wc command on this file to print the number of lines it has
+
+
 
 
 
