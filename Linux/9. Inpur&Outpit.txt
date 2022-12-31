@@ -1,0 +1,42 @@
+File Descriptors
+Every program we run on the command line automatically has three data streams connected to it.
+
+STDIN (0) - Standard input
+How data is entered or presented for processing
+Typically the keyboard or mouse, but it could also be a file
+STDOUT (1) - Standard output
+data printed by the program, defaults to the terminal
+STDERR (2) - Standard error (for error messages, also defaults to the terminal)
+Error messages that are returned, kept separate from stdout
+
+
+Piping and redirection is how we may connect these streams between programs and files to direct data in interesting and useful ways.-
+
+
+echo command
+The standard output (or stdout) is a bash storage space that stores the output of a command.
+We can use the echo command to add a string to stdout
+
+===========================================
+Writing to files via output redirection
+  1. The output from a command normally intended for standard output can be easily diverted to a file instead. This capability is known as output redirection and the > operator is used for this.
+
+ex:- ls -l > ankit.txt 
+
+=================================================
+Use the grep command to find the comment lines and then redirect the output to a file instead
+
+let suppose if we want to transfer all the line which start from # into another file we use grep method like this:-
+
+ex:-  grep # anit.py > vishal.py
+
+in case of transfer the line we use  > single operator 
+but in case of overriding the present content we use >> double operator 
+
+
+
+====================================================
+
+
+
+
