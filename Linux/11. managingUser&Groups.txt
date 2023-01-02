@@ -1,0 +1,8 @@
+Managing users
+  =>Some of the commands which are used frequently to manage users on Linux are following:
+
+    => useradd - Creates a new user
+    => passwd - Adds or modifies passwords for a user
+    => usermod - Modifies attributes of an user
+    => userdel - Deletes an user
+
