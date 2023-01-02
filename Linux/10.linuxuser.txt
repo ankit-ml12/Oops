@@ -1,0 +1,82 @@
+Understanding User Accounts
+A user account allows you to sign in to your computer. By default, your computer already has one user account, which you were required to create when you set up your computer. If you plan to share your computer with others, you can create a separate user account for each person.
+
+Why use individual user accounts?
+
+For Linux, having multiple users is essential for administering servers. Usually, teams administer a server for a variety of purposes.
+
+:-To give permissions per team member ( junior - fewer permissions, senior - more permissions )
+:-Traceability - who did what on the system?
+=================================================
+Linux User Account
+Access to Linux systems is provided using user accounts, and all activity on the system is owned and managed by user accounts.
+
+ ==> Each user account contains two unique identifiers:- username and UID. When a user account is created, its username is mapped to a unique UID.
+==> The user uses a username while the system uses the UID. Two users can’t use the same username.
+==> UID is fixed. It cannot be changed. Once assigned, it always remains the same for that user account.
+==> Users are unique to the computer but not unique across all computers. This means that the UID on LAPTOP-1    might    be the same UID on LAPTOP-2, even if it is not the same user.
+
+
+==================================================
+Type id in your terminal to know the uid, gid.
+==================================================
+
+Types of User Accounts
+Users can be divided into three categories based on the level of access:
+
+1. Superuser/root/administrator account
+   =>It is automatically created during the installation of Linux. It has the highest privilege in the system.
+   =>It has access to all the files on the system, manages all other users, and performs critical actions, such as deleting folders, updating the system, connecting to other computers, and myriad other tasks.
+   =>Always 1 root user per computer, and it can’t be deleted.
+   =>This account is intended for system administration and should be used only for this purpose.
+
+2. Normal/Regular users account
+  =>During the installation of Linux, one regular user account is created automatically.
+  =>They have a /home directory and a login shell associated with them.
+  =>This account has moderate ( limited access ) privilege as is intended for daily work. It can perform only the tasks for which it is allowed and access only those files and services/applications for which it is authorized. If you try executing such a command without the necessary rights, Linux will refuse you.
+  =>We can create as many regular user accounts as we need. As per requirement, it can be disabled or deleted.  
+
+3. Service account
+  =>Each service will get its individual user account.
+    1.In easy terms, a service is a program or application in Linux that runs or expects to run in the background.   
+    That is, it is running without the need for the user to be aware of it all the time.
+    2. E.g., a mysql user will start a MySQL service/application ( MySQL is a popular database).
+  =>These accounts are neither intended nor should be used for daily routine work.
+  =>It can have multiple service users in a system.
+
+===============================
+Linux Groups
+In Linux, a group is a collection of users. Linux users can be members of one or more groups.
+
+  =>Linux group helps to set privileges such as read, write and execute permission for files and directories that can be shared with users in the group.
+      =>In simple terms, sharing trip photos with all your friends is easier if you are part of the same Whatsapp Group.
+
+  =>Each group contains two unique identifiers:- group name and GID.
+  =>For example, User tom is part of both ‘Web developers’ and ‘Sales’ group. So tom can access files belonging to both groups.
+
+  Linux has two user groups:
+
+
+       =>Primary group
+          =>A Primary group is a group created automatically when a user is created, with the same name as the user.
+          =>The created user will be the only member of this group. So every Linux user has at least one primary group.
+          =>Files owned by a user’s primary group cannot be accessed by other users. For example, files owned by Tim can’t be accessed by other users in the same system.
+
+       =>Secondary group
+          =>It is a supplementary group. Users can be members of multiple secondary groups in Linux.
+          =>Secondary groups are helpful when we need to grant certain privileges to the group members.
+
+  
+  =======================
+
+Files Controlling User Accounts and Groups
+Where do you think Linux stores information about all the users and groups in the system? Let’s find out about them.
+
+1. /etc/passwd
+   => Contains the attributes for all the user accounts in a system.
+
+2. /etc/shadow
+   => Stores the passwords for all user accounts in an encrypted format. 
+
+3. /etc/group
+   => Contains all of the groups configured on a system and the users who belong to those groups.
