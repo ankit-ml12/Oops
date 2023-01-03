@@ -1,0 +1,79 @@
+Need of file permissions
+  => Just like other operating systems, Linux also protects resources with a set of permissions.
+  => These permissions define how a user should access the resources.
+  => A user is anyone who accesses the resource such as user account, system process or application.
+  => A resource is an object accessed by user such as file or directory.
+  => Each object has three levels of permissions; user owner permissions, group owner permissions and other permissions. These permissions define how user, group and others can access that object respectively.
+
+     (Note: A group is a set of users)
+
+Lets’ try to understand the different permission levels:
+
+   =>  User owner is the user who created that object or designated as user owner by actual owner or root (admin) user.
+   =>  Group owner is the primary group of user owner or designated group by actual owner or root user.
+   => All remaining users and groups are considered as others.
+
+
+
+   =============================
+permission:- 
+---     ---     ---
+rwx     rwx     rwx
+user    group   other
+
+Read, write, execute and –
+The ‘r’ means you can “read” the file’s contents. 
+The ‘w’ means you can “write”, or modify, the file’s contents. 
+The ‘x’ means you can “execute” the file. This permission is given only if the file is a program. 
+If any of the “rwx” characters is replaced by a ‘-‘, then that permission has been revoked. 
+
+
+
+=================
+ decode permission:-
+ -rw-r--r--
+at 1st position
+{-}:- indicate file
+{d}:- indicate directory
+{l}:- indicate a link
+
+at 2nd to 4th position
+r:- read permission to the owner
+w:- write permission to the owner
+x:- execute permission to the owner
+
+at 5th to 7th position
+r-- :- for member of the group owning the file
+at 8th to 10th position
+r-- :-  for other user
+
+now to add any access mode to the file we use
+chmod +x <filename>
+chmod +rwx <filename>
+chmod -wx <filename> 
+Above methode work only for owner of the file
+
+in case of group ans user we use 'g' ans 'o'
+chmod g+w <filename>
+chmod o-rw <filename>
+
+Note:-
+chmod ugo+rwx foldername to give read, write, and execute to everyone.
+chmod a=r foldername to give only read permission for everyone.
+
+
+==========================
+File permission using digits
+
+4 :- read permission
+2 :- write permisiion
+1 :- execute permission 
+
+‘0’ represents no permission. For example:
+
+
+chmod 777 foldername will give read, write, and execute permissions for everyone.
+chmod 700 foldername will give read, write, and execute permissions for the user only.
+chmod 327 foldername will give write and execute (3) permission for the user, w (2) for the group, and read, write, and execute for the users.
+
+try to implement it on linux machine
