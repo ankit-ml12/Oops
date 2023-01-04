@@ -1,1 +1,107 @@
 How to install software in linux?
+
+Package Manager
+ => Let us install applications mostly with package manager tools like apt on CLI
+ => APT stands for Advanced Package Tool. It is a set of core tools inside Debian and Ubuntu Linux system.
+ => You can use the apt command to install, delete or remove apps, keep Ubuntu/Debian server up to date with    security patches and more. Apt work with dpkg command to install and update the system.
+ => Knows where to put all the files in the Linux file system
+ => Provides an easy way to upgrade the existing software in the system
+ => The applications which we need to install are also called software packages.
+    => Software packages are a compressed archive containing all required files for the software to run.
+    => They usually come along with dependencies, which need to be installed with it. In the above scenario when we are installing vlc, the text listed after The following additional packages will be installed: are the list of additional packages ( dependencies ) which will be required for VLC to function properly.
+ => There are package managers for other Linux distributions as well
+    => Yum/DNF -> RHEL Linux, Fedora
+    => Pacman  -> ArchLinux
+
+====================================================================
+
+1. Install a package
+ If you already know the name of the package, you can install it using the command below: 
+ sudo apt install <package_name>
+Just replace the <package_name> with the desired package. Suppose you want to install mplayer, you can simply use the command below:
+
+
+sudo apt install mplayer
+
+
+The good thing here is that you can use auto-completion. So, if you are not sure about the exact package name, you can type a few letters and press tab and it will suggest all the packages available with those letters. For example: Use auto-completion to find packages with a given name
+
+
+You are not bound to install just one package at a time. You can install several packages at a time by providing the package names all together:
+
+sudo apt install <package_1> <package_2> <package_3>
+
+================================================================
+2.Remove a package
+
+Enough talk about installing packages, let’s see how to remove packages. Removing packages is as easy as installing them. Just use the command below: sudo apt remove <package_name>
+
+
+Another way of uninstalling packages is to use purge. The command is used in the following manner: 
+sudo apt purge <package_name>
+
+
+What is the difference between apt remove and apt purge?
+
+   => apt remove just removes the binaries of a package. It leaves residue configuration files.
+   => apt purge removes everything related to a package including the configuration files.
+
+If you used apt remove to a get rid of a particular software and then install it again, your software will have the same configuration files. Of course, you will be asked to override the existing configuration files when you install it again.
+
+Purge is useful when you have messed up with the configuration of a program. You want to completely erase its traces from the system and perhaps start afresh. And yes, you can use apt purge on an already removed package.
+
+Usually, apt remove is more than enough for uninstalling a package.
+
+====================================================================
+
+3.Refresh repository index
+
+apt actually works on a database of available packages. If the database is not updated, the system won’t know if there are any newer packages available. This is why updating the repository should be the first thing to do in any Linux system after a fresh install.
+
+Updating the package database requires superuser privileges so you’ll need to use sudo.
+
+sudo apt update
+When you run this command, you’ll see the package information is retrieved from various servers.
+
+You’ll see three types of lines here, Hit, Get and Ign. Basically these are:
+
+ => Hit: there is no change in package version from the previous version
+ => Ign: the package is being ignored. Either the package is way too recent that it doesn’t even bother to check or there was an error in retrieving the file but error was trivial and thus it is being ignored. Don’t worry, this is not an error.
+ => Get: There is a new version available. It will download the information about the version (not the package itself). You can see that there is download information (size in kb) with the ‘get’ line in the screenshot above.
+
+===============================================
+4.Upgrade all packages
+
+Once you have updated the package database, you can now upgrade the installed packages. The most convenient way is to upgrade all the packages that have available updates. You can simply use the command below:
+
+sudo apt upgrade
+
+
+
+What is the difference between apt update and apt upgrade?
+
+Though it sounds like when you do an apt update, it will update the packages and you’ll get the latest version of the package. But that’s not true. apt update only updates the database of the packages.
+
+For example, if you have XYZ package version 1.3 installed, after apt update, the database will be aware that a newer version 1.4 is available.  When you do an apt upgrade after apt update, it upgrades (or updates, whichever term you prefer) the installed packages to the newer version.
+
+This is the reason why the fastest and the most convenient way to update Ubuntu system by using this command:
+
+sudo apt update && sudo apt upgrade -y
+Below table shows a head-to-head comparison of how the same functions can be achieved using apt-get package management tool.
+
+=========================================
+some other commands
+apto autoremove :- remove unwanted package
+apt full-upgrade :- upgrade package with auto handling of dependencies
+apt seach :- searches for the program
+apt show :- shows package details
+
+========================================
+Alternative ways to install packages
+You would prefer this option if we want to install relatively new applications, which are not yet in the official repositories.                                                        
+
+We add the repository, which contains the package to official repositories list
+
+Often the command is listed in the installation guide of the tool:
+
+learn about it letter
