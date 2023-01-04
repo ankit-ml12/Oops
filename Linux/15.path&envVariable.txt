@@ -1,0 +1,45 @@
+Environment variables
+Say I have a directory that I often visit and have an absolute path, /home/crio-user/Downloads/videos/series/english/series1/season100/episode1. It’s quite tedious typing this out every time I need to do an ls of the directory or cd to the directory. If there’s one thing that we should keep in mind being a developer, there’s always an easy way to do things or if not, you have a potential pet-project to work on :)
+
+
+
+
+Ok, Linux has environment variables that store important information as variables.
+
+(Note: Variables are nothing but containers or storage for values)
+
+We can use the printenv command to print those out.
+===============================================================
+
+Using environment variables
+We can print out environment variable values using echo $<variable-name>
+
+
+====================
+Creating environment variables
+We can create an environment variable using the below syntax
+
+VARIABLE_NAME=”<value>”
+
+======================================================================================================
+
+
+PATH
+Quick question - How does Linux know ls is a command and should print out the contents of the current directory but shows a command not found error when we execute some random command like jkdfjsdjkjdk? Where did Linux find the ls command?
+
+
+PATH is an environment variable containing a list of directories. This tells the (bash) shell where to search for executables when the user inputs a command.
+
+There are multiple directories here separated by “:”
+
+/opt/lib/vscode/bin/remote-cli
+/usr/local/sbin
+/usr/local/bin
+/usr/sbin
+/usr/bin
+/sbin
+/bin, etc
+
+You’’ll find the ls command inside the /bin directory
+Executables in a directory under PATH
+Remember how we executed our run.sh file earlier? We used ./run.sh, right? What happens if you execute just run.sh, does it run?
