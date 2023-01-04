@@ -1,0 +1,52 @@
+
+Can our system support GTA 5?
+The minimum system requirement for running GTA 5 (Grand Theft Auto, which is a video game) are
+
+CPU - 2500 MHz 
+RAM - 4GB
+Free Disk Space - 65GB
+
+===============
+
+Let’s check if our system can support GTA 5. Fingers crossed!
+
+How would you check the clock speed of a processor?
+
+/proc/cpuinfo file
+  => Linux stores CPU related information in the /proc/cpuinfo file.
+  => You can view its content using cat command.
+  => You’ll be able to see the clock speed listed as the “cpu MHz” attribute.
+  =>  There can be more than one “cpu MHz” entry if the processor is multi-core.
+  ===============================
+/proc/meminfo file
+  => This file stores memory related information.
+      => MemTotal - total memory available
+      => MemFree - amount of free memory
+  => You can view the information using cat command.
+
+==========================
+free command gives a quick summary of the memory usage.
+
+========================
+Similar to ls -h, free -h prints the memory usage in human-readable format like KB, MB, GB etc.
+=========================
+vmstat command can be used to display the memory usage along with additional information about io and cpu usage. This command is a part of sysstat package which needs to be installed using any package managers like apt.
+=========================
+
+Activity
+Print out just the value of the MemFree attribute which denotes the amount of free memory. 
+==========================
+Note
+1. Filter for the line in /proc/meminfo containing the attribute MemFree
+2. Fetch the numerical value and “kB” in that line
+
+===========================
+df command
+This command is used to see the storage usage by different file system directories 
+==============================
+du command
+=> What if we wanted to view disk usage at directory level?
+ 1. The du command prints disk usage information for directories
+     1. It lists the storage occupied by each of its directories and at the end shows the total size of the directory
+ 2. du -a shows size of files as well
+ 3. du -s shows size of just the total size of the directory
