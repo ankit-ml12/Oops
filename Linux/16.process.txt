@@ -68,3 +68,9 @@ Try to find out from the above top command output:
 2. The “Tasks” line displays count of processes. There are 118 total processes as highlighted in yellow
 3. The first lines shows info like system current time, system up time etc. The system current time is 21:47:52 as shown in red. Also, it has been up and running for 3mins and 41seconds
 4. The lower section of top output shows process level resource usage. As highlighted in orange, the process started by the redis-server command uses 3656KB of residual memory (RES) which is the actual physical memory used
+
+
+=============
+ CPU usage can be > 100% if there are multiple CPU cores.
+
+
