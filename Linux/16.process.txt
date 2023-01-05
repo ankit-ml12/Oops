@@ -23,3 +23,48 @@ The -f parameter is for full format and provides additional information like the
 
 =======================================
 
+
+What is PPID?
+
+PPID is quite closely related to a PID. PPID stands for "parent process ID", and if you didn't get it already, it simply stands for the process that created the process you are checking.
+
+For example, let's say that we have two processes. One is named "spawner", and has a process ID (or PID) of 7234. Our second process, "email client", has a process ID of 7456 when we create it. Our spawner program starts our email client, resulting in our email client having a PID of 7456, and a PPID of 7234, since the spawner (which had the PID of 7234) is what spawned the email client.
+
+
+
+Let’s start a process and explore its properties. We’ll use the Netcat utility to start a server process.
+
+   => A server is just a process running on a computer that’s open for communication with someone else
+   => For example, Google’s server is ready to get our search keyword & return us results for it
+
+To start the server using Netcat, use nc -v -l 8081. We’ll see what the command means in further Bytes.
+
+    => For now, we’ll check the properties of this newly created Netcat server process using some commands
+    => Hit Ctrl + z to suspend aka run the process in the background, so that we’ll get the terminal prompt back for running other commands.
+    (Note: Ctrl + c will terminate the process instead)
+
+To identify each running process, the OS tags them with a unique identifier called Process ID (or PID). We use the ps command to get process related info. It prints out all the processes currently running from that terminal.
+
+So, our netcat server which we started with the nc command has a PID of 16496.
+
+Every process will have a parent process and ps provides us with the process id of the parent process via the PPID (Parent Process ID) attribute. We’ll need to do a full-format listing of ps output using the -f option
+
+========================================
+Checking resource usage
+Processes need system resources like CPU, Physical memory etc. to stay “alive”. Monitoring resource usage of processes helps us troubleshoot issues like the system being slow. top command gives us a dynamic view of the current state of system resource utilization by the processes
+
+
+====================================
+activity:- 
+
+Try to find out from the above top command output:
+
+1. Amount of free memory available
+2. Total number of processes
+3. System time
+4. Actual physical memory consumed by the process named redis-server (Check for “RES” column)
+
+1. The “KiB Mem” line displays the memory usage. We can see the amount of free memory highlighted in green
+2. The “Tasks” line displays count of processes. There are 118 total processes as highlighted in yellow
+3. The first lines shows info like system current time, system up time etc. The system current time is 21:47:52 as shown in red. Also, it has been up and running for 3mins and 41seconds
+4. The lower section of top output shows process level resource usage. As highlighted in orange, the process started by the redis-server command uses 3656KB of residual memory (RES) which is the actual physical memory used
