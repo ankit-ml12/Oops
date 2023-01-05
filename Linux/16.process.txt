@@ -1,0 +1,25 @@
+Process Management
+An engine is built using numerous different parts. These parts work together to make your car move. If one of the parts isn't working correctly, the overall performance will suffer or the engine may stop completely. The Linux operating system is no different. Everything that runs on your system is run via something known as a process, with that simply being the running instance of a program. Processes are one of those key components in the operating system. Anytime you have a running application or execute a command from the command line, a process with a unique identifier is created.
+
+Processes are sets of instructions currently being run by the Operating System (OS). The set of instructions is provided by a program stored on the disk. In short, a program in execution is called a process. Each of the applications we interact with like the browser, file explorer, etc will be one or more processes.
+
+
+As a Linux enthusiast, you need to be familiar with the various utilities available to you so you can monitor and troubleshoot processes.
+
+The first tool we are going to use will be the ps command. The ps command stands for process status and displays a point-in-time snapshot of the processes running on your system.
+
+Now let's switch over to the terminal and take a look at the ps command with no parameters.
+
+This command only shows the processes tied to the current shell. The only processes which are currently executing or already executed in this terminal are bash and the ps command itself. To identify each running process, the OS tags them with a unique identifier called Process ID (or PID). Each time you run this command we will see a different PID for ps command. We enter this command on the terminal and it prints the output and exits on completion. We would need PID if we want to kill the process, monitor the process and many more other scenarios.
+===================================
+
+So let's go a little deeper and start adding parameters to the command. Let's type ps -e in the terminal.
+This output displays all active processes on the system in a simple format. It displays the PID, TTY terminal device, CPU time used, and the command for the process.
+
+Let's keep working with the parameters. This time, we will use the -f parameter with the -e parameter. We will type ps -ef.
+
+
+The -f parameter is for full format and provides additional information like the user of the process, the parent process ID, CPU usage, which is an integer value that shows the percent of usage over the lifetime of the process, and start time when the process started. Every process will have a parent process and ps -f provides us with the process id of the parent process via the PPID (Parent Process ID) attribute.
+
+=======================================
+
