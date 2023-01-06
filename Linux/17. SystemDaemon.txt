@@ -1,0 +1,40 @@
+What is a Daemon?
+
+Imagine that you are watching a video on YouTube. Your intent is to do just that – watch the video. It’s rather nice not having to manually start display services and network services and then monitor them all day to make sure that they are working right. We can thank daemons for that – they do that kind of work for us.
+
+Daemon are utility programs that run silently in the background to monitor and take care of certain subsystems to ensure that the operating system runs properly.
+
+
+What Daemons are Running on Your Machine?
+
+To identify a daemon, look for a process that ends with the letter d. It’s a general Linux rule that the names of daemons end this way.
+
+The pstree command is a handy little utility that shows the processes currently running on your system and it show them in a tree diagram. Open up a terminal and type in this command:
+
+pstree
+You will see a complete listing of all of the processes that are running. You may not know what some of them are, or what they do, they are listed. The pstree output is a pretty good illustration as to what is going on with your machine. There’s a lot going on!
+
+Ex. of few daemons can be seen here: rsyslogd, sshd, systemd, snapd and some others. systemd looks like an important daemon as all other daemons seem like they are originating from it.
+===============================================
+
+What is systemd?
+
+Systemd is a system and service manager for Linux operating systems. Systemd units are the building blocks of systemd.
+
+What is a systemd unit?
+A unit is a systemd object that performs or controls a particular task or action. Systemd uses units to start/stop/manage services, organize boot process, maintain tasks and processes, create sockets, mount file-system and initialize hardware.
+
+A systemd unit consists of a name, type, and configuration file. The name provides a unique identity to the unit. The configuration file defines the responsibility or task of the unit. The type helps the unit to group with other similar types of units.
+
+To understand the relationship between systemd and units, consider systemd as a bus driver and the units as the controllers of the bus such as gear, clutch, lever, brake, accelerator, etc. Just like, to drive and control the bus, the bus driver uses controllers, the systemd uses units to control the system processes and services.
+
+To list all available unit types, you can use the systemctl -t help command.
+
+We’ll be primarily focusing on service unit. A unit of this type starts, stops, restarts or reloads a service daemon such as MongoDB.
+
+<br>
+
+How do we interact with these service units?
+
+The systemctl command interacts with the SystemD service manager to manage the services.
+
