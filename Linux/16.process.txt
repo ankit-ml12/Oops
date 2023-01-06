@@ -74,3 +74,20 @@ Try to find out from the above top command output:
  CPU usage can be > 100% if there are multiple CPU cores.
 
 
+=================
+Advance usage 
+
+It’d be hard for us to find our Netcat process from the long list. top command lets us filter its output by the PID of a process.
+
+
+1. We can use top -p <pid> to find the resource usage of a particular process
+
+   We don’t want to let a process run unnecessarily to avoid wasting system resources. We had earlier suspended the Netcat process, so it is still in memory and needs to be killed.
+
+2. To stop running a process, we can use the kill command with the -9 option.
+
+3. The & operator at the end of a command automatically sends the process to background
+
+4. To bring back a process sent to background, we can use the fg (foreground) command
+
+5. to kill a process in the foreground, we can use Ctrl + c also in addition to kill -9
