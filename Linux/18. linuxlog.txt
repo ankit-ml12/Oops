@@ -1,0 +1,52 @@
+What Is a LOG File?
+
+A file with the LOG file extension, sometimes called a logfile, is used by all kinds of software and operating systems to keep track of something that has occurred, usually complete with an event detail, date, and time. It could be used for anything the application deems appropriate to write down.
+
+For example, antivirus software might write information to a LOG file to describe the last scan results, like the files and folders that were checked or skipped, and which files were marked as containing malicious code.
+
+A file backup program could make a LOG file you can open later to review a previous backup job, read through any errors that were encountered, or see where the files were backed up to.
+
+A much simpler purpose for this format is to merely explain the newest features that were included in the most recent update of a piece of software. These are normally called release notes or changelogs.
+
+In real-world scenarios, the black box is a recording device used by aviation investigators to analyze the events leading to air mishap/crashes. Black boxes are of the size of shoe boxes, and fit inside the aircraft to record in-flight information. The data can be used in the event of an incident or accident. They are actually known as flight recorders. This data can help aviation engineers to perform an in-depth analysis of what led to an air crash and how it can be prevented in the future.
+
+=====
+
+
+What are Linux logs?
+Linux logs give you a visual history of everything that’s been happening in the heart of a Linux operating system. So, if anything goes wrong, they give a useful overview of events in order to help you, the administrator, seek out the culprits.
+
+For problems relating to particular apps, the developer decides where best to put the log of events. So with Google Chrome for instance, any time it hangs, you want to look in ‘~/.chrome/Crash Reports’ to discover the gory details of what tripped the system up.
+
+Linux log files should be easy to decipher since they’re stored in text form under the /var/log directory and subdirectory. They cover all kinds of things, like system, kernel, package managers, MySQL and more.
+
+
+How do I view log files on Linux?
+Go to /var/log directory using the following cd command:
+
+cd /var/log
+List the log files use the ls command:
+
+
+To view a common log file called /var/log/auth.log use any one of the following commands:
+
+
+sudo less /var/log/auth.log
+sudo more -f /var/log/auth.log
+sudo cat /var/log/auth.log
+sudo tail -f /var/log/auth.log
+sudo grep -i error /var/log/auth.log
+
+
+====================================================
+Learn about comman linux log file names and usage
+========================================================
+Viewing logs with dmesg
+
+The dmesg command is a Linux utility that displays kernel-related messages retrieved from the kernel ring buffer. The ring buffer stores information about hardware, device driver initialization, and messages from kernel modules that take place during system startup.
+
+The dmesg command is invaluable when troubleshooting hardware-related errors, and warnings, and for diagnosing device failure.
+
+
+One of the interesting scenarios where this command was used was to determine whether a student has plagiarized in practical laboratory exams or not. During lab examinations, generally, a computer machine is cut off from the internet so there is no way to google the solutions. The only option which remains is to insert a USB flash drive into the computer and copy the solutions. Every single action is logged to kernel even if it involves inserting and ejecting the flash drive which makes it easier to get exact data from dmesg command when this malpractice happened.
+
