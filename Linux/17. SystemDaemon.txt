@@ -38,3 +38,46 @@ How do we interact with these service units?
 
 The systemctl command interacts with the SystemD service manager to manage the services.
 
+1.List All services
+In order to manage the services, you first need to know what services are available on your system.
+
+You can use the systemd command to list all the services on your Linux system:
+systemctl list-unit-files --type service -all
+
+Combine it with the grep command and you can display just the running services:
+sudo systemctl | grep running
+
+Now that you know how to reference all different services, you can start actively managing them.
+
+Note:-  <service-name> in the commands should be replaced by the name of the service you wish to manage (e.g. network-manager, ufw etc.).
+
+===============
+
+2.Start a service
+To start a service in Linux, you just need to use its name like this:
+systemctl start <service-name>
+
+3.Stop a service
+To stop a systemd service, you can use the stop option of systemctl command:
+systemctl stop <service-name>
+
+4.Restart a service
+To restart a service in Linux with systemd, you can use:
+systemctl restart <service-name>
+
+5.Check the status of a service
+You can confirm that you have successfully executed a certain action by printing the service status:
+systemctl status <service-name>
+
+
+
+========================================
+Activity
+MongoDB is a database that is managed by SystemD as a service unit. Perform the below operations and let us know what is the output.
+
+1. sudo systemctl start mongodb
+2. sudo systemctl stop mongodb
+3. sudo systemctl restart mongodb
+4. sudo systemctl status mongodb
+
+
