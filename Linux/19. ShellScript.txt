@@ -31,6 +31,7 @@ No matter how careful you are, manual errors always creep in during these repeti
 
 Bash scripting is a powerful way to automate tasks you must execute on a computer. Put simply, a Bash script is just a collection of Bash commands which are kept in a text file.
 
+===============================================
 
 
 Pros and Cons of Bash Scripts
