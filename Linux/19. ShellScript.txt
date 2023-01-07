@@ -1,0 +1,55 @@
+What is a Shell?
+Before we look at scripting, let’s take a step back and break down what a shell is and how it relates to you and your computer. What is a Shell? We can crudely break a computer down into two main components: the operating system (e.g. UNIX) and the hardware (e.g. memory, graphics, or CPU).
+
+We can crudely break a computer down into two main components: the operating system (e.g. UNIX) and the hardware (e.g. memory, graphics, or CPU). Without hardware, very little can be done with a computer. A software, known as the operating system, is installed to communicate with this hardware.
+
+The operating system is typically broken down into two parts: the user space and the kernel. The kernel has direct access to the hardware and is responsible for sensitive tasks such as managing resources. Meanwhile, the user space acts as an interface, translating the user's needs into the system calls run by the kernel.
+
+So, now we get to the original question, “what is a shell”? A good analogy here is a hazelnut. At the core of hazelnut is a soft, edible kernel, surrounded by a hardened shell to protect it. In the realm of Linux, the shell is a command-line interpreter that provides a user interface for running commands. It acts as a wrapper, protecting the sensitive kernel inside. Without the shell, you couldn’t run commands. Without commands, there’d be no operating system. Without an operating system, there’d be no PC.
+
+
+What is Bash?
+Simply put, bash ( Bourne again shell - Improved version of sh) is a shell and command language used in Linux. So, bash is a type of shell that makes it possible to run commands on Linux.
+
+
+There are many types of shells available, each of which has a specific syntax. Bash is now the default shell on most Linux systems.
+
+
+===================
+Why need Shell Scripts?
+Shell Script is a program to write a series of commands for the shell to execute. Let’s say you want to know what proportion of lines in a file contains a particular phrase. First, you would need to determine the total number of lines in that file. Then, count the number of lines containing the phrase. Finally, you would need to perform a calculation to get the proportion of lines with that phrase. Simple, right?
+
+
+Now let’s say you need to do this for 100 files, once for each file, and record the results…not so simple, eh?
+
+
+You could take the highly tedious approach of manually running the commands 100 times. But, how long would it be before you made a mistake? How would you track the output of all your commands? What if you needed to rerun the same thing tomorrow?
+
+
+No matter how careful you are, manual errors always creep in during these repetitive tasks. We have a simple path to salvation from this tedium…Bash/shell scripting!
+
+
+Bash scripting is a powerful way to automate tasks you must execute on a computer. Put simply, a Bash script is just a collection of Bash commands which are kept in a text file.
+
+
+
+Pros and Cons of Bash Scripts
+There are several advantages to using bash scripts and only a few disadvantages.
+
+Advantages of Bash Scripts
+The advantages of bash scripts include:
+
+Simple to create
+Can run multiple commands easily
+Interactive debugging
+Portable
+Time-saving
+Cost-effective
+Can be automated
+Installed on nearly all Linux operating systems
+Disadvantages of Bash Scripts
+Bash scripting isn’t without its disadvantages, which include:
+
+Not nearly as fast as a standard program
+Limited usability (when compared to traditional programs)
+Launches a new process for every shell command executed (which means it can be resource intensive if a script is complex)
