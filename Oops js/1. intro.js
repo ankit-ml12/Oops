@@ -1,4 +1,6 @@
 //start with Capital Letter
+//it is constructor function
+//we will learn class in future lecture
 function BankAccount(customerName, balance = 0) {
   //property of obj
   this.customerName = customerName
